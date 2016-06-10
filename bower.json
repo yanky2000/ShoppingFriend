@@ -1,0 +1,21 @@
+{
+  "name": "test",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "VY <yanky2000@yahoo.com>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "dev/components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "underscore": "^1.8.3"
+  }
+}
