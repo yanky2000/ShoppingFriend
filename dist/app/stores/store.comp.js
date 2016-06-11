@@ -12,7 +12,7 @@
             controllerAs: 'storeModel',
             controller: function () {
 
-                this.categories = ['овощи', "фрукты"]
+                this.categories = ['Овощи', "Фрукты"]
 
                 // this.categories = (filterGoods) => {
 

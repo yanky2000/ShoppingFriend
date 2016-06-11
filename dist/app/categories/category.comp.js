@@ -9,15 +9,12 @@
                 category: '<'
             },
             templateUrl: 'app/categories/category.tmpl.html',
+            
             controllerAs: 'categoryModel',
             controller: function (filterGoods) {
-
-                this.products = function () {
+                
+                this.products =
                     filterGoods.filter({ category: this.category });
-                }
-
-                // this.categories = [{ name: "Овощи" }, { name: "Бакалея" }];
-
             }
         })
 

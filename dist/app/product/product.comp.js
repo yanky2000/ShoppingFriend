@@ -10,7 +10,7 @@
             templateUrl: 'app/product/product.tmpl.html',
             controllerAs: 'productModel',
             controller: function () {
-                this.products = filterGoods.filter({ category: this.category });
+                // this.products = filterGoods.filter({ category: this.category });
 
             },
         })
