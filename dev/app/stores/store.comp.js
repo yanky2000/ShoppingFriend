@@ -12,7 +12,8 @@
             controllerAs: 'storeModel',
             controller: function () {
 
-                this.categories = ['Овощи', "Фрукты"]
+                this.categories = ['Овощи', "Фрукты"];
+
 
                 // this.categories = (filterGoods) => {
 
@@ -21,6 +22,13 @@
 
 
             },
+        })
+
+        .component('testing', {
+            template: '<h1>should be redirected</h1>',
+            controller: function ($state) {
+                $state.go('test2');
+            }
         })
 
 

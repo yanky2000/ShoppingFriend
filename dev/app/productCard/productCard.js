@@ -3,20 +3,18 @@
 
     angular
         .module('myApp')
-        .component('category', {
+        .component('productCard', {
             bindings: {
                 product: "<",
                 category: '<'
             },
-            templateUrl: 'app/categories/category.tmpl.html',
-            
-            controllerAs: 'categoryModel',
+            templateUrl: 'app/productCard/productCard.html',
+            controllerAs: 'productCard',
             controller: function (filterGoods) {
-                
+
                 this.products =
                     filterGoods.filter({ category: this.category });
             }
         })
 
 })();
-

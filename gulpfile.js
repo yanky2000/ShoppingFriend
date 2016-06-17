@@ -97,7 +97,7 @@ gulp.task('stylesConcat', function () {
 
 /* ========== JAVASCRIPT ==============*/
 gulp.task("js", function () {
-    return gulp.src("dev/app/*.js")
+    return gulp.src("dev/app/**/*.js")
         //.pipe(sourcemaps.init())
         .pipe(babel())
         // .pipe(concat("all.js"))
@@ -173,8 +173,8 @@ gulp.task('build', gulp.series(
 gulp.task('watch', function () {
     gulp.watch(cssDevPath, gulp.series('stylesConcat'));
     // gulp.watch('dev/**/*.jade', gulp.series('jade'));
-    gulp.watch('dev/**/*.*', gulp.series('assets'));
-    gulp.watch('dev/app/*.js', gulp.series('js'));
+    gulp.watch('dev/**/*.html', gulp.series('assets'));
+    gulp.watch('dev/app/**/*.js', gulp.series('js'));
     gulp.watch('dev/**/*.{sass,css}', gulp.series('stylesConcat')).on('unlink', function (filepath) {
         /* make 'remember' and 'cache' remove files, that have been deleted  from dev folder. As a result, if we delete some sass/css files from dev their content won't added to output files from Modules cache */
         remember.forget('stylesConcat', path.resolve(filepath));

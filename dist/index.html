@@ -28,14 +28,21 @@
     </header>
     {{"it is" + " working"}}
 
-    <home></home>
     <!--<home></home>-->
+    <ul>
+        <li>
+            <a ui-sref='home'>Home</a>
+        </li>
+        <li ui-sref-active='active'> should be RED
+            <a ui-sref='store'>Store</a>
+        </li>
+        <li ui-sref-active='active'>
+            <a ui-sref='productCard'>card</a>
+        </li>
 
-    <!--<category>
-    </category>
-
-    <product></product>-->
-
+    </ul>
+    <ui-view></ui-view>
+    <!--<home></home>-->
 
 
 
@@ -54,7 +61,7 @@
     <!--<script src="test.js"></script>-->
 
     <!--Jquery-->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
     <!--Angular-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
@@ -65,11 +72,13 @@
 
     <!--App-->
     <script src="app/app.js"></script>
+    <script src="app/router.js"></script>
     <script src="app/common/goodsData.js"></script>
     <script src="app/home/home.comp.js"></script>
     <script src="app/stores/store.comp.js"></script>
     <script src="app/categories/category.comp.js"></script>
     <script src="app/product/product.comp.js"></script>
+    <script src="app/productCard/productCard.js"></script>
     <!--<script src="app/categories/category.comp.js"></script>-->
     <!--<script src="app/categories/category.comp.js"></script>-->
     <!--<script src="../angular-ui-router.js"></script>-->

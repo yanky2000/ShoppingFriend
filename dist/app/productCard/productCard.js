@@ -3,14 +3,13 @@
 (function () {
     'use strict';
 
-    angular.module('myApp').component('category', {
+    angular.module('myApp').component('productCard', {
         bindings: {
             product: "<",
             category: '<'
         },
-        templateUrl: 'app/categories/category.tmpl.html',
-
-        controllerAs: 'categoryModel',
+        templateUrl: 'app/productCard/productCard.html',
+        controllerAs: 'productCard',
         controller: function controller(filterGoods) {
 
             this.products = filterGoods.filter({ category: this.category });
